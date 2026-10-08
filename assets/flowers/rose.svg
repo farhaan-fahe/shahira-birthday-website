@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+  <!-- Hand-drawn Vintage Rose SVG -->
+  <g stroke-linecap="round" stroke-linejoin="round" stroke="#c24d58" stroke-width="2">
+    <!-- Rose Center Spiral -->
+    <path d="M100,90 C105,85 110,92 108,98 C105,103 95,103 93,95 C90,85 105,78 115,85 C122,92 118,108 102,112 C88,115 80,98 86,85 C92,72 115,68 128,82 C138,94 130,118 108,124 C85,130 72,110 75,90" fill="#fff0f3" fill-opacity="0.8"/>
+    <!-- Outer Petals Layer 1 -->
+    <path d="M85,82 C72,65 100,55 118,60 C130,64 142,75 140,90" fill="#fdfbf7" fill-opacity="0.75"/>
+    <path d="M138,88 C155,102 148,125 130,135 C115,142 90,140 75,128" fill="#fdfbf7" fill-opacity="0.75"/>
+    <path d="M72,115 C58,102 60,78 78,68" fill="#fdfbf7" fill-opacity="0.75"/>
+    <!-- Outer Petals Layer 2 -->
+    <path d="M115,58 C135,45 158,62 155,85" stroke-dasharray="1 1"/>
+    <path d="M152,95 C168,115 152,148 125,152" stroke-dasharray="1 1"/>
+    <path d="M110,150 C80,160 55,138 52,110" stroke-dasharray="1 1"/>
+    <!-- Leaves -->
+    <path d="M60,135 Q40,150 25,145 Q35,125 60,135 Z" fill="#e8f3e8" stroke="#7a9a7a" stroke-width="1.8"/>
+    <path d="M25,145 Q42,138 60,135" stroke="#7a9a7a" stroke-width="1.2"/>
+    <path d="M140,138 Q165,152 178,145 Q168,125 140,138 Z" fill="#e8f3e8" stroke="#7a9a7a" stroke-width="1.8"/>
+    <path d="M140,138 Q162,138 178,145" stroke="#7a9a7a" stroke-width="1.2"/>
+    <!-- Stem -->
+    <path d="M100,152 Q102,175 100,195" stroke="#7a9a7a" stroke-width="2.5"/>
+  </g>
+</svg>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Happiest Birthday, Shahira Banu — A handmade digital scrapbook and cinematic memory story.">
+  <meta name="theme-color" content="#fcf8f2">
+  <title>Happiest Birthday, Shahira Banu ♡ 09 · 10 · 2008</title>
+
+  <!-- Google Fonts: Elegant Script, Serif, & Clean Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Marck+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Reenie+Beanie&family=Sacramento&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=20261008_hero">
+</head>
+<body>
+
+  <!-- Custom subtle cursor for desktop -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+  </div>
+
+  <!-- Ambient Global Particle Canvas -->
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Audio Mini-Player Control Widget (always accessible) -->
+  <aside class="floating-audio-widget" id="floatingAudioWidget" aria-label="Music Player Control">
+    <button class="music-pill-btn" id="musicToggleBtn" title="Play ambient music" aria-label="Play background music">
+      <div class="mini-disc" id="miniDisc">
+        <span class="disc-hole"></span>
+      </div>
+      <div class="sound-wave" id="soundWave">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="music-pill-text" id="musicPillTitle">Cinnamon Girl</span>
+    </button>
+  </aside>
+
+  <!-- Main Mobile-First Wrapper Container -->
+  <main class="app-viewport" id="appViewport">
+
+    <!-- ========================================================= -->
+    <!-- SCENE 1 & 2: VINTAGE STATIONERY HERO & INK CAKE          -->
+    <!-- ========================================================= -->
+    <section class="scene scene-hero-cake" id="sceneHero" aria-label="Birthday Card and Cake">
+      <div class="stationery-card hero-card">
+        
+        <!-- Top Hanging String with Ribbon Bow (Ref 2) -->
+        <div class="top-string-ribbon" aria-hidden="true">
+          <img src="assets/decorations/top-ribbon-bow.svg" alt="" class="string-bow-img">
+        </div>
+
+        <!-- Black Foil Balloon 18 in Upper Left (Ref 1) -->
+        <div class="deco-balloon-18" aria-hidden="true">
+          <img src="assets/decorations/balloon-18.svg" alt="18" class="balloon-18-img">
+        </div>
+
+        <!-- Large Shaded Velvet Bow in Upper Right (Ref 1) -->
+        <div class="deco-black-bow deco-bow-top-right" aria-hidden="true">
+          <img src="assets/decorations/black-bow.svg" alt="" class="black-bow-img">
+        </div>
+
+        <!-- Scattered Hand-Drawn Stars & Sparkles (Ref 2) -->
+        <div class="deco-scattered-stars" aria-hidden="true">
+          <img src="assets/decorations/sketch-star-black.svg" alt="" class="star-item star-black-1">
+          <img src="assets/decorations/sketch-star-glitter.svg" alt="" class="star-item star-glitter-1">
+          <img src="assets/decorations/sketch-star-black.svg" alt="" class="star-item star-black-2">
+          <img src="assets/decorations/sketch-star-glitter.svg" alt="" class="star-item star-glitter-2">
+          <img src="assets/decorations/sparkle-doodle.svg" alt="" class="star-item sparkle-1">
+          <img src="assets/decorations/sparkle-doodle.svg" alt="" class="star-item sparkle-2">
+          <img src="assets/decorations/sparkle-doodle.svg" alt="" class="star-item sparkle-3">
+        </div>
+
+        <!-- Stationery Typography Group -->
+        <header class="hero-header stationery-header">
+          <p class="script-subtitle stationery-script" id="heroBirthdayHeading">Happiest Birthday</p>
+          <h1 class="serif-title stationery-title" id="heroName">Shahira Banu</h1>
+          <div class="stationery-date-wrap">
+            <span class="stationery-date-line"></span>
+            <div class="date-badge stationery-date" id="heroBirthdayDate">09 · 10 · 2008</div>
+            <span class="stationery-date-line"></span>
+          </div>
+          <div class="wish-banner stationery-wish-badge">
+            <span class="wish-banner-text stationery-badge-text" id="heroWishBadge">MAKE A WISH!!</span>
+          </div>
+        </header>
+
+        <!-- Hand-Drawn Ink Sketch Birthday Cake Composition -->
+        <div class="cake-stage stationery-cake-stage" id="cakeStage">
+          <!-- Sparkles & Celebration Confetti Canvas overlay on Cake -->
+          <canvas id="cakeConfettiCanvas" class="cake-confetti-canvas" aria-hidden="true"></canvas>
+
+          <div class="cake-illustration-wrapper sketch-cake-wrapper" id="cakeWrapper" role="button" tabindex="0" aria-label="Birthday Cake. Tap to blow candle.">
+            
+            <!-- Hand-Drawn Cake Vector -->
+            <img src="assets/decorations/sketch-cake.svg" alt="Birthday Cake" class="sketch-cake-img">
+
+            <!-- Interactive Candle & Flame Overlay (aligned over the candle wick) -->
+            <div class="candle-container sketch-candle-container" id="candleContainer">
+              <div class="flame-glow" id="flameGlow"></div>
+              <div class="flame" id="flame">
+                <div class="flame-inner"></div>
+              </div>
+              <div class="smoke-puff" id="smokePuff"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lower Left Bow (Ref 1) -->
+        <div class="deco-black-bow deco-bow-bottom-left" aria-hidden="true">
+          <img src="assets/decorations/black-bow.svg" alt="" class="black-bow-img-small">
+        </div>
+
+        <!-- Stationery Editorial Action Button -->
+        <div class="hero-actions stationery-actions">
+          <button class="stationery-blow-btn" id="blowCandleBtn" aria-label="Blow out candle">
+            <span class="btn-sparkle-mark">✦</span>
+            <span class="btn-text" id="blowBtnText">BLOW THE CANDLE</span>
+            <span class="btn-sparkle-mark">✦</span>
+          </button>
+          <p class="tap-hint stationery-hint" id="candleBlowHint">Tap the candle or button to blow it out</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 3: DEDICATED BIRTHDAY WISH MESSAGE                  -->
+    <!-- ========================================================= -->
+    <section class="scene scene-wish" id="sceneWish" aria-label="Birthday Wish Section">
+      <div class="scrapbook-paper-card wish-card reveal-on-scroll">
+        <div class="washi-tape washi-center" aria-hidden="true"></div>
+        <img src="assets/flowers/dahlia.svg" alt="" class="deco-flower deco-dahlia-corner" aria-hidden="true">
+        <img src="assets/decorations/heart-doodle.svg" alt="" class="deco-heart-corner" aria-hidden="true">
+
+        <header class="section-card-header">
+          <span class="chapter-number">CHAPTER 01</span>
+          <h2 class="script-heading" id="wishHeading">A little birthday wish ♡</h2>
+          <div class="decorative-separator">
+            <span>✿</span><span>✦</span><span>✿</span>
+          </div>
+        </header>
+
+        <article class="wish-letter-body" id="wishMessageContainer">
+          <p>Happiest birthday Shahira, may Allah bless you with all the happiness, peace, and goodness your heart wishes for. May Allah accept all your duas, protect you from every harm and hardship, and guide you towards everything that is meant for you. May He bless you with good health, success, barakah, and a beautiful life ahead, and may all the dreams you carry in your heart come true in the best way and at the right time.</p>
+          <p>I hope this birthday brings you a new chapter filled with beautiful moments, genuine smiles, and countless reasons to be grateful. You have been a really special part of my life, and even though things between us are different now, that doesn’t change the fact that I sincerely wish the best for you.</p>
+          <p>I was genuinely looking forward to your birthday when things were okay between us, and I never imagined that by the time this day came, things would be so different. Still, today isn’t about the distance or the past; it’s simply about wishing you well.</p>
+          <p>I’m truly sorry for everything, for the things I did wrong, the things I regret, and for any way I may have hurt you. I carry that regret with me, but I’m not saying this expecting anything from you. I just wanted to be honest and wish you from my heart.</p>
+          <p>May Allah keep you surrounded by people who value you, keep your heart at peace, and protect you wherever life takes you. May He bless you not only today, but throughout every chapter of your life.</p>
+          <p>Happiest birthday once again, Shahira. May Allah always keep you happy and safe. 🫠🎀</p>
+        </article>
+
+        <div class="scroll-down-prompt">
+          <span>Scroll down for the envelope</span>
+          <div class="bouncing-arrow">↓</div>
+        </div>
+
+        <div class="torn-paper-edge bottom-edge" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 4: CINEMATIC ENVELOPE INTERACTION                  -->
+    <!-- ========================================================= -->
+    <section class="scene scene-envelope" id="sceneEnvelope" aria-label="Interactive Envelope">
+      <div class="starry-atmosphere-backdrop" aria-hidden="true"></div>
+
+      <div class="envelope-scene-content reveal-on-scroll">
+        <div class="scene-pre-tag">SPECIAL DELIVERY · 09.10.2008</div>
+        <h2 class="cinematic-title">A Letter From The Heart</h2>
+        <p class="cinematic-sub">Tap the wax seal to unfold the handwritten pages</p>
+
+        <!-- 3D Interactive Envelope Container -->
+        <div class="envelope-wrapper" id="envelopeWrapper" role="button" tabindex="0" aria-label="Tap to open letter envelope">
+          <div class="envelope-3d" id="envelope3D">
+            
+            <!-- Back Flap -->
+            <div class="env-back"></div>
+
+            <!-- The Letter Sheet that slides upward -->
+            <div class="env-letter-preview" id="envLetterPreview">
+              <div class="mini-letter-lines">
+                <div class="mini-line w-80"></div>
+                <div class="mini-line w-90"></div>
+                <div class="mini-line w-70"></div>
+                <div class="mini-line w-85"></div>
+              </div>
+              <div class="mini-flower-stamp">🌸</div>
+            </div>
+
+            <!-- Left & Right Fold Flaps -->
+            <div class="env-left"></div>
+            <div class="env-right"></div>
+            
+            <!-- Bottom Fold Flap -->
+            <div class="env-bottom"></div>
+
+            <!-- Top Flap (Flips open on click) -->
+            <div class="env-top-flap" id="envTopFlap"></div>
+
+            <!-- Front Envelope Stamp & Details -->
+            <div class="env-front-decor">
+              <div class="env-recipient-label">
+                <p class="env-korean-name" id="envRecipientText">Happy Birthday, 샤히라 ♡</p>
+                <p class="env-korean-sub" id="envSubtitleText">Neomu bogo sipeo.</p>
+              </div>
+              
+              <!-- Wax Seal -->
+              <div class="wax-seal" id="waxSeal" title="Break seal to open">
+                <div class="seal-inner">
+                  <span>♡</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="pill-scrapbook-btn btn-open-letter" id="openLetterBtn">
+          <span>💌 OPEN ENVELOPE</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 5: LONG HANDWRITTEN LETTER PARCHMENT                -->
+    <!-- ========================================================= -->
+    <section class="scene scene-letter" id="sceneLetter" aria-label="Long Handwritten Letter">
+      <div class="parchment-sheet reveal-on-scroll">
+        <div class="washi-tape washi-left" aria-hidden="true"></div>
+        <div class="washi-tape washi-right" aria-hidden="true"></div>
+
+        <img src="assets/flowers/branch.svg" alt="" class="deco-branch-left" aria-hidden="true">
+        <img src="assets/flowers/rose.svg" alt="" class="deco-rose-bottom-right" aria-hidden="true">
+
+        <header class="parchment-header">
+          <span class="letter-date" id="letterDate">September 10</span>
+          <h2 class="letter-title" id="letterTitle">A Letter for You</h2>
+          <div class="letter-separator"></div>
+        </header>
+
+        <article class="letter-content" id="longLetterContainer">
+          <!-- Injected dynamically from config.js -->
+        </article>
+
+        <footer class="letter-footer">
+          <p class="letter-signoff" id="letterSignOff">With genuine care & warm thoughts,</p>
+          <div class="letter-signature">Always. ♡</div>
+        </footer>
+
+        <div class="torn-paper-edge bottom-edge" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 6: MINI INTERACTIVE GAMES                           -->
+    <!-- ========================================================= -->
+    <section class="scene scene-games" id="sceneGames" aria-label="Mini Interactive Games">
+      <div class="scrapbook-paper-card games-card reveal-on-scroll">
+        <div class="washi-tape washi-center" aria-hidden="true"></div>
+
+        <header class="section-card-header">
+          <span class="chapter-number">CHAPTER 02</span>
+          <h2 class="script-heading">Playful Moments ♡</h2>
+          <p class="scrapbook-sub">Two nostalgic mini-games crafted with care</p>
+          
+          <!-- Game Switcher Tabs -->
+          <div class="game-tabs" role="tablist">
+            <button class="game-tab-btn active" id="tabDotsGame" role="tab" aria-selected="true" aria-controls="gameDotsContainer">
+              <span>🌸 Dots & Boxes</span>
+            </button>
+            <button class="game-tab-btn" id="tabDrawGame" role="tab" aria-selected="false" aria-controls="gameDrawContainer">
+              <span>🎨 Drawing Together</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- GAME 1: DOTS & BOXES -->
+        <div class="game-container active" id="gameDotsContainer" role="tabpanel" aria-labelledby="tabDotsGame">
+          <div class="game-info-bar">
+            <div class="player-badge player-1 active" id="badgeP1">
+              <span class="player-dot"></span>
+              <span class="player-label">You (Pink)</span>
+              <span class="player-score" id="scoreP1">0</span>
+            </div>
+            <div class="vs-text">vs</div>
+            <div class="player-badge player-2" id="badgeP2">
+              <span class="player-dot"></span>
+              <span class="player-label">Shahira (Purple)</span>
+              <span class="player-score" id="scoreP2">0</span>
+            </div>
+          </div>
+
+          <p class="game-instruction" id="dotsInstruction">Tap between any two dots to draw a line. Complete a box to claim a heart!</p>
+
+          <div class="dots-board-wrapper">
+            <div class="dots-board" id="dotsBoard">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <div class="game-actions">
+            <button class="mini-action-btn" id="resetDotsBtn">↺ Reset Game</button>
+            <button class="mini-action-btn" id="toggleAiBtn">🤖 Play with Memory Bot</button>
+          </div>
+        </div>
+
+        <!-- GAME 2: DRAWING TOGETHER -->
+        <div class="game-container" id="gameDrawContainer" role="tabpanel" aria-labelledby="tabDrawGame" hidden>
+          <p class="game-instruction">Doodle a tiny birthday flower, note, or warm wish on the canvas!</p>
+          
+          <!-- Sketchpad Toolbar -->
+          <div class="sketch-toolbar">
+            <div class="palette-colors" id="paletteColors">
+              <button class="color-btn active" data-color="#c24d58" style="background:#c24d58;" title="Rose Red" aria-label="Rose Red color"></button>
+              <button class="color-btn" data-color="#e8829c" style="background:#e8829c;" title="Petal Pink" aria-label="Petal Pink color"></button>
+              <button class="color-btn" data-color="#9d7bb0" style="background:#9d7bb0;" title="Lavender Purple" aria-label="Lavender Purple color"></button>
+              <button class="color-btn" data-color="#eed99e" style="background:#eed99e;" title="Warm Gold" aria-label="Warm Gold color"></button>
+              <button class="color-btn" data-color="#8eafce" style="background:#8eafce;" title="Soft Sky Blue" aria-label="Soft Sky Blue color"></button>
+              <button class="color-btn" data-color="#554449" style="background:#554449;" title="Vintage Charcoal" aria-label="Vintage Charcoal color"></button>
+            </div>
+
+            <!-- Brush Size & Mode -->
+            <div class="tool-controls">
+              <label class="size-label" for="brushSizeInput">Size:</label>
+              <input type="range" id="brushSizeInput" min="2" max="24" value="4" class="brush-slider">
+              
+              <button class="tool-btn" id="stampBtn" title="Flower Stamp">🌸 Stamp</button>
+              <button class="tool-btn" id="eraserBtn" title="Eraser">🧹 Eraser</button>
+              <button class="tool-btn" id="clearCanvasBtn" title="Clear Canvas">🗑 Clear</button>
+            </div>
+          </div>
+
+          <!-- Drawing Canvas -->
+          <div class="sketch-canvas-box">
+            <canvas id="sketchCanvas" width="340" height="280"></canvas>
+          </div>
+
+          <div class="game-actions">
+            <button class="mini-action-btn" id="saveDoodleBtn">💾 Save / Download Doodle</button>
+            <span class="save-feedback" id="saveFeedback"></span>
+          </div>
+        </div>
+
+        <div class="torn-paper-edge bottom-edge" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 7: K-DRAMA SCRAPBOOK ("OUR STICKY LOVE")            -->
+    <!-- ========================================================= -->
+    <section class="scene scene-kdrama" id="sceneKdrama" aria-label="Our Sticky Love K-Drama Section">
+      <div class="kdrama-cinematic-card reveal-on-scroll">
+        <div class="washi-tape washi-center" aria-hidden="true"></div>
+
+        <header class="kdrama-header">
+          <h2 class="kdrama-title" id="kdramaTitle">Our Sticky Love</h2>
+          <div class="kdrama-separator">
+            <span>✿</span><span>✦</span><span>✿</span>
+          </div>
+        </header>
+
+        <!-- Hanging Clothesline with 5 Polaroids & Wooden Clothespins -->
+        <div class="hanging-clothesline-wrapper" id="kdramaGallery">
+          
+          <!-- Natural Twine String with subtle catenary sag curve -->
+          <div class="hanging-twine-line" aria-hidden="true">
+            <svg class="twine-svg-curve" viewBox="0 0 1000 60" preserveAspectRatio="none">
+              <!-- Soft twine shadow on paper -->
+              <path d="M 0,16 Q 500,48 1000,16" stroke="rgba(40, 25, 15, 0.14)" stroke-width="2.5" fill="none"/>
+              <!-- Twine natural braided cord -->
+              <path d="M 0,14 Q 500,46 1000,14" stroke="#a27e54" stroke-width="1.8" stroke-dasharray="10 2 14 2" fill="none"/>
+              <!-- Subtle light cord highlight -->
+              <path d="M 0,13.2 Q 500,45.2 1000,13.2" stroke="#d8bc93" stroke-width="0.8" fill="none" opacity="0.85"/>
+            </svg>
+          </div>
+
+          <!-- Five Hanging Polaroid Photos Row -->
+          <div class="hanging-polaroids-track">
+            
+            <!-- Photo 1: Cherry Blossom -->
+            <div class="hanging-polaroid polaroid-item-1" tabindex="0" role="button" aria-label="View photo: Cherry blossom scene">
+              <div class="wooden-clothespin" aria-hidden="true">
+                <svg viewBox="0 0 18 42" class="clothespin-vector">
+                  <!-- Wooden Peg Left Prong -->
+                  <rect x="2" y="2" width="6" height="38" rx="2" fill="#d9b480" stroke="#8f693b" stroke-width="0.8"/>
+                  <!-- Wooden Peg Right Prong -->
+                  <rect x="10" y="2" width="6" height="38" rx="2" fill="#cca36c" stroke="#825a2e" stroke-width="0.8"/>
+                  <!-- Inner Split Shadow -->
+                  <line x1="9" y1="3" x2="9" y2="39" stroke="#785023" stroke-width="0.8"/>
+                  <!-- Metal Spring Coil -->
+                  <rect x="1" y="16" width="16" height="7" rx="2" fill="#78716c" stroke="#3d3834" stroke-width="0.8"/>
+                  <circle cx="9" cy="19.5" r="1.6" fill="#292524"/>
+                </svg>
+              </div>
+              <div class="polaroid-card-body">
+                <div class="polaroid-image-slot">
+                  <img src="assets/images/kdrama-cherry-blossom.jpg" alt="Our Sticky Love - Cherry Blossom Scene" class="polaroid-photo-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 2: Beach Scene -->
+            <div class="hanging-polaroid polaroid-item-2" tabindex="0" role="button" aria-label="View photo: Beach scene">
+              <div class="wooden-clothespin" aria-hidden="true">
+                <svg viewBox="0 0 18 42" class="clothespin-vector">
+                  <rect x="2" y="2" width="6" height="38" rx="2" fill="#d9b480" stroke="#8f693b" stroke-width="0.8"/>
+                  <rect x="10" y="2" width="6" height="38" rx="2" fill="#cca36c" stroke="#825a2e" stroke-width="0.8"/>
+                  <line x1="9" y1="3" x2="9" y2="39" stroke="#785023" stroke-width="0.8"/>
+                  <rect x="1" y="16" width="16" height="7" rx="2" fill="#78716c" stroke="#3d3834" stroke-width="0.8"/>
+                  <circle cx="9" cy="19.5" r="1.6" fill="#292524"/>
+                </svg>
+              </div>
+              <div class="polaroid-card-body">
+                <div class="polaroid-image-slot">
+                  <img src="assets/images/kdrama-beach.jpg" alt="Our Sticky Love - Beach Scene" class="polaroid-photo-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 3: Ceremony / Wedding Scene -->
+            <div class="hanging-polaroid polaroid-item-3" tabindex="0" role="button" aria-label="View photo: Ceremony scene">
+              <div class="wooden-clothespin" aria-hidden="true">
+                <svg viewBox="0 0 18 42" class="clothespin-vector">
+                  <rect x="2" y="2" width="6" height="38" rx="2" fill="#d9b480" stroke="#8f693b" stroke-width="0.8"/>
+                  <rect x="10" y="2" width="6" height="38" rx="2" fill="#cca36c" stroke="#825a2e" stroke-width="0.8"/>
+                  <line x1="9" y1="3" x2="9" y2="39" stroke="#785023" stroke-width="0.8"/>
+                  <rect x="1" y="16" width="16" height="7" rx="2" fill="#78716c" stroke="#3d3834" stroke-width="0.8"/>
+                  <circle cx="9" cy="19.5" r="1.6" fill="#292524"/>
+                </svg>
+              </div>
+              <div class="polaroid-card-body">
+                <div class="polaroid-image-slot">
+                  <img src="assets/images/kdrama-wedding.jpg" alt="Our Sticky Love - Ceremony Scene" class="polaroid-photo-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 4: Campfire Scene -->
+            <div class="hanging-polaroid polaroid-item-4" tabindex="0" role="button" aria-label="View photo: Campfire scene">
+              <div class="wooden-clothespin" aria-hidden="true">
+                <svg viewBox="0 0 18 42" class="clothespin-vector">
+                  <rect x="2" y="2" width="6" height="38" rx="2" fill="#d9b480" stroke="#8f693b" stroke-width="0.8"/>
+                  <rect x="10" y="2" width="6" height="38" rx="2" fill="#cca36c" stroke="#825a2e" stroke-width="0.8"/>
+                  <line x1="9" y1="3" x2="9" y2="39" stroke="#785023" stroke-width="0.8"/>
+                  <rect x="1" y="16" width="16" height="7" rx="2" fill="#78716c" stroke="#3d3834" stroke-width="0.8"/>
+                  <circle cx="9" cy="19.5" r="1.6" fill="#292524"/>
+                </svg>
+              </div>
+              <div class="polaroid-card-body">
+                <div class="polaroid-image-slot">
+                  <img src="assets/images/kdrama-campfire.jpg" alt="Our Sticky Love - Campfire Scene" class="polaroid-photo-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 5: Sunset Scene -->
+            <div class="hanging-polaroid polaroid-item-5" tabindex="0" role="button" aria-label="View photo: Sunset by the sea">
+              <div class="wooden-clothespin" aria-hidden="true">
+                <svg viewBox="0 0 18 42" class="clothespin-vector">
+                  <rect x="2" y="2" width="6" height="38" rx="2" fill="#d9b480" stroke="#8f693b" stroke-width="0.8"/>
+                  <rect x="10" y="2" width="6" height="38" rx="2" fill="#cca36c" stroke="#825a2e" stroke-width="0.8"/>
+                  <line x1="9" y1="3" x2="9" y2="39" stroke="#785023" stroke-width="0.8"/>
+                  <rect x="1" y="16" width="16" height="7" rx="2" fill="#78716c" stroke="#3d3834" stroke-width="0.8"/>
+                  <circle cx="9" cy="19.5" r="1.6" fill="#292524"/>
+                </svg>
+              </div>
+              <div class="polaroid-card-body">
+                <div class="polaroid-image-slot">
+                  <img src="assets/images/kdrama-sunset.jpg" alt="Our Sticky Love - Sunset by the Sea" class="polaroid-photo-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="polaroid-tap-hint">tap any photo to view closer ♡</p>
+        </div>
+
+        <div class="torn-paper-edge bottom-edge" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 8: MUSIC ATMOSPHERE INTEGRATION                     -->
+    <!-- ========================================================= -->
+    <section class="scene scene-music" id="sceneMusic" aria-label="Music Atmosphere Section">
+      <div class="scrapbook-paper-card music-card reveal-on-scroll">
+        <div class="washi-tape washi-center" aria-hidden="true"></div>
+
+        <header class="section-card-header">
+          <span class="chapter-number">CHAPTER 03</span>
+          <h2 class="script-heading">Melodies & Atmosphere ♡</h2>
+          <p class="scrapbook-sub">Soundtracks that hold late night memories</p>
+          <div class="decorative-separator">
+            <span>✿</span><span>✦</span><span>✿</span>
+          </div>
+        </header>
+
+        <!-- Elegant Vinyl Card UI -->
+        <div class="music-player-panel">
+          <div class="vinyl-display">
+            <div class="vinyl-record" id="vinylRecord">
+              <div class="vinyl-grooves"></div>
+              <div class="vinyl-center-label">
+                <span class="center-art">🌸</span>
+              </div>
+            </div>
+            <div class="tonearm" id="tonearm"></div>
+          </div>
+
+          <div class="track-meta">
+            <h3 class="current-track-title" id="trackTitleDisplay">Cinnamon Girl</h3>
+            <p class="current-track-artist" id="trackArtistDisplay">Lana Del Rey</p>
+            <p class="current-track-album" id="trackAlbumDisplay">Norman Fucking Rockwell!</p>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="audio-progress-bar" id="audioProgressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="audio-time-row">
+            <span id="audioCurrentTime">0:00</span>
+            <span id="audioTotalDuration">5:00</span>
+          </div>
+
+          <!-- Playback controls -->
+          <div class="music-controls-row">
+            <button class="music-ctrl-btn" id="prevTrackBtn" title="Previous Track" aria-label="Previous Track">⏮</button>
+            <button class="music-ctrl-btn play-main-btn" id="mainPlayBtn" title="Play or Pause" aria-label="Play or Pause">▶</button>
+            <button class="music-ctrl-btn" id="nextTrackBtn" title="Next Track" aria-label="Next Track">⏭</button>
+          </div>
+
+          <!-- Track List Selector -->
+          <div class="playlist-selector" id="playlistSelector">
+            <!-- Injected dynamically from config.js -->
+          </div>
+          <div class="spotify-embed-container" id="spotifyEmbedContainer"></div>
+        </div>
+
+        <div class="torn-paper-edge bottom-edge" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCENE 10: FINAL CINEMATIC ENDING (STARRY NIGHT SKY)       -->
+    <!-- ========================================================= -->
+    <section class="scene scene-ending" id="sceneEnding" aria-label="Cinematic Ending Scene">
+      <!-- Starry Night Background Canvas with dynamic stars, swirling celestial clouds, glowing lanterns -->
+      <canvas id="starryNightCanvas" class="starry-night-canvas" aria-hidden="true"></canvas>
+
+      <div class="ending-content reveal-on-scroll">
+        <!-- Floating Lanterns / Petals container -->
+        <div class="floating-lanterns-box" aria-hidden="true">
+          <div class="lantern lantern-1">🏮</div>
+          <div class="lantern lantern-2">🏮</div>
+          <div class="lantern lantern-3">✨</div>
+        </div>
+
+        <div class="ending-card">
+          <div class="ending-star-badge">✦ · ✦ · ✦</div>
+          <h2 class="ending-heading" id="endingHeading">Happy Birthday, Shahira ♡</h2>
+          <p class="ending-subheading" id="endingSubheading">“May your year ahead be as vast, gentle, and brilliant as the night sky.”</p>
+          
+          <div class="ending-divider"></div>
+          
+          <p class="ending-closing-note" id="endingClosingNote">
+            Wishing you peace, bright smiles, and gentle days ahead. Always take good care of yourself.
+          </p>
+          
+          <p class="ending-korean" id="endingKoreanFarewell">
+            생일 진심으로 축하해 · Neomu bogo sipeo
+          </p>
+
+          <div class="ending-actions">
+            <button class="pill-scrapbook-btn btn-replay" id="replayExperienceBtn">
+              <span>↻ Relive Story from Beginning</span>
+            </button>
+            <button class="pill-scrapbook-btn btn-send-wish" id="sendWishHeartBtn">
+              <span>💖 Send a Silent Birthday Wish</span>
+            </button>
+          </div>
+
+          <div class="silent-wish-popup" id="wishSentPopup">
+            <span>✨ Your warm wish has flown to the stars. Take care always. ✨</span>
+          </div>
+        </div>
+
+        <footer class="ending-credits">
+          <p>Handmade with genuine care for Shahira Banu · 09 · 10 · 2008</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Audio Element for local MP3 files -->
+  <audio id="htmlAudioPlayer" preload="none"></audio>
+
+  <!-- Load Configuration & Logic Scripts -->
+  <script src="config.js?v=20261008_hero"></script>
+  <script src="script.js?v=20261008_hero"></script>
+</body>
+</html>

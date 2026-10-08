@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+  <!-- Hand-drawn Dahlia SVG with geometric floral petals -->
+  <g stroke-linecap="round" stroke-linejoin="round" stroke="#c24d58" stroke-width="1.8">
+    <g transform="translate(100,100)">
+      <!-- Radial Dahlia Petals -->
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" fill="#fff0f3"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(30)" fill="#fdfbf7"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(60)" fill="#fff0f3"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(90)" fill="#fdfbf7"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(120)" fill="#fff0f3"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(150)" fill="#fdfbf7"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(180)" fill="#fff0f3"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(210)" fill="#fdfbf7"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(240)" fill="#fff0f3"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(270)" fill="#fdfbf7"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(300)" fill="#fff0f3"/>
+      <path d="M0,0 Q-8,-35 0,-50 Q8,-35 0,0" transform="rotate(330)" fill="#fdfbf7"/>
+      
+      <!-- Inner layer -->
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(15)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(45)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(75)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(105)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(135)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(165)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(195)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(225)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(255)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(285)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(315)" fill="#fae8ee" stroke="#9d7bb0"/>
+      <path d="M0,0 Q-5,-25 0,-35 Q5,-25 0,0" transform="rotate(345)" fill="#fae8ee" stroke="#9d7bb0"/>
+
+      <!-- Center -->
+      <circle cx="0" cy="0" r="10" fill="#eed99e" stroke="#c24d58"/>
+      <circle cx="0" cy="0" r="4" fill="#b23a48"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none">
+  <defs>
+    <!-- Metallic foil black balloon gradient -->
+    <linearGradient id="foilGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#4a4a4a"/>
+      <stop offset="25%" stop-color="#141414"/>
+      <stop offset="45%" stop-color="#5c5c5c"/>
+      <stop offset="55%" stop-color="#111111"/>
+      <stop offset="80%" stop-color="#383838"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <!-- Crisp glossy highlight reflection -->
+    <linearGradient id="glossHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="balloonShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#balloonShadow)">
+    <!-- Balloon Number 1 -->
+    <g id="balloonNum1" transform="translate(10, 4)">
+      <!-- Main body of 1 -->
+      <path d="M 32 10 C 26 10, 20 18, 12 26 C 10 28, 14 34, 18 32 C 24 28, 28 24, 30 22 L 30 96 C 30 102, 22 103, 16 104 C 14 107, 16 112, 20 112 L 48 112 C 52 112, 54 107, 52 104 C 46 103, 38 102, 38 96 L 38 18 C 38 12, 36 10, 32 10 Z" fill="url(#foilGrad)" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- Glossy crease reflections on 1 -->
+      <path d="M 32 14 L 32 94" stroke="url(#glossHighlight)" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 16 28 Q 24 22 30 20" stroke="url(#glossHighlight)" stroke-width="2" stroke-linecap="round"/>
+      <!-- Valve tab at bottom of 1 -->
+      <path d="M 31 112 L 37 112 L 36 118 L 32 118 Z" fill="#222"/>
+    </g>
+
+    <!-- Balloon Number 8 -->
+    <g id="balloonNum8" transform="translate(68, 4)">
+      <!-- Outer rounded figure-8 shape -->
+      <path d="M 40 8 C 22 8, 8 22, 8 38 C 8 50, 16 58, 26 62 C 14 68, 4 78, 4 94 C 4 112, 20 126, 40 126 C 60 126, 76 112, 76 94 C 76 78, 66 68, 54 62 C 64 58, 72 50, 72 38 C 72 22, 58 8, 40 8 Z 
+               M 40 22 C 48 22, 54 28, 54 36 C 54 44, 48 50, 40 50 C 32 50, 26 44, 26 36 C 26 28, 32 22, 40 22 Z 
+               M 40 68 C 50 68, 58 76, 58 88 C 58 100, 50 108, 40 108 C 30 108, 22 100, 22 88 C 22 76, 30 68, 40 68 Z" 
+            fill="url(#foilGrad)" stroke="#1a1a1a" stroke-width="1.5" fill-rule="evenodd"/>
+      <!-- Foil metallic glossy highlights on 8 -->
+      <path d="M 32 14 C 22 18, 14 26, 14 36" stroke="url(#glossHighlight)" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 28 66 C 18 72, 10 82, 10 94" stroke="url(#glossHighlight)" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 48 14 C 58 18, 64 26, 64 36" stroke="url(#glossHighlight)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M 52 66 C 62 72, 68 82, 68 94" stroke="url(#glossHighlight)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <!-- Valve tab at bottom of 8 -->
+      <path d="M 37 126 L 43 126 L 42 132 L 38 132 Z" fill="#222"/>
+    </g>
+  </g>
+</svg>

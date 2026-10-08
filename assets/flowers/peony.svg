@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+  <!-- Botanical Peony SVG -->
+  <g stroke-linecap="round" stroke-linejoin="round" stroke="#9d7bb0" stroke-width="1.8">
+    <!-- Peony Layered petals -->
+    <path d="M90,75 C95,65 105,65 110,75 C108,82 92,82 90,75 Z" fill="#fae8f0"/>
+    <path d="M82,78 C75,68 85,55 100,55 C115,55 125,68 118,78" fill="#fdf0f5"/>
+    <path d="M75,85 C65,75 70,58 92,48 C115,48 132,60 128,82" fill="#fff5f9"/>
+    <path d="M70,95 C55,85 58,65 80,50 C105,40 135,48 142,75 C145,90 135,102 125,108" fill="#fdfbf7" fill-opacity="0.8"/>
+    <!-- Center Ruffles -->
+    <path d="M85,92 C92,88 108,88 115,92 C118,102 82,102 85,92 Z" fill="#e8829c" fill-opacity="0.4"/>
+    <path d="M78,105 C65,115 80,135 100,138 C120,135 135,115 122,105" fill="#fdfbf7"/>
+    <path d="M65,110 C50,125 72,150 100,152 C128,150 150,125 135,110" fill="#fff5f9" fill-opacity="0.9"/>
+    <!-- Outer delicate curves -->
+    <path d="M50,105 C40,85 55,60 85,50" stroke-dasharray="2 2"/>
+    <path d="M150,105 C160,85 145,60 115,50" stroke-dasharray="2 2"/>
+    <!-- Calyx & Leaves -->
+    <path d="M80,150 Q60,170 45,165 Q60,145 80,150 Z" fill="#e2efe2" stroke="#7a9a7a" stroke-width="1.8"/>
+    <path d="M120,150 Q140,170 155,165 Q140,145 120,150 Z" fill="#e2efe2" stroke="#7a9a7a" stroke-width="1.8"/>
+    <path d="M100,152 Q100,180 98,198" stroke="#7a9a7a" stroke-width="2.5"/>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <defs>
+    <!-- Rich charcoal-to-black ribbon gradient -->
+    <linearGradient id="bowGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="50%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="bowGradHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#555555" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#2a2a2a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#141414" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="knotGrad" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#4a4a4a"/>
+      <stop offset="60%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <filter id="bowShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#bowShadow)">
+    <!-- Back Tail Left -->
+    <path d="M 88 56 C 80 90, 72 130, 74 180 C 76 210, 68 226, 62 234 C 64 220, 76 170, 78 130 C 80 90, 85 64, 88 56 Z" fill="url(#bowGradDark)" opacity="0.95"/>
+    
+    <!-- Flowing Long Tail Right (Characteristic wavy cascade from reference) -->
+    <path d="M 108 56 C 118 85, 126 115, 118 145 C 110 175, 116 205, 128 228 C 122 216, 120 185, 126 155 C 132 125, 122 90, 108 56 Z" fill="url(#bowGradDark)"/>
+    <!-- Tail Right inner shadow/fold -->
+    <path d="M 112 60 C 122 92, 124 120, 117 150 C 111 176, 114 200, 122 220" stroke="#484848" stroke-width="2.5" stroke-linecap="round" opacity="0.4" fill="none"/>
+
+    <!-- Left Bow Loop Outer -->
+    <path d="M 94 48 C 70 20, 32 18, 16 36 C 4 50, 14 74, 38 78 C 64 82, 86 64, 94 48 Z" fill="url(#bowGradDark)"/>
+    <!-- Left Loop Highlight fold -->
+    <path d="M 92 48 C 72 26, 40 24, 24 38 C 14 49, 20 66, 38 70 C 58 74, 82 60, 92 48 Z" fill="url(#bowGradHighlight)"/>
+    <!-- Left loop inner depth -->
+    <path d="M 45 42 C 32 44, 25 54, 30 62 C 36 70, 52 64, 62 54 Z" fill="#121212" opacity="0.85"/>
+
+    <!-- Right Bow Loop Outer -->
+    <path d="M 104 48 C 128 20, 166 18, 182 36 C 194 50, 184 74, 160 78 C 134 82, 112 64, 104 48 Z" fill="url(#bowGradDark)"/>
+    <!-- Right Loop Highlight fold -->
+    <path d="M 106 48 C 126 26, 158 24, 174 38 C 184 49, 178 66, 160 70 C 140 74, 116 60, 106 48 Z" fill="url(#bowGradHighlight)"/>
+    <!-- Right loop inner depth -->
+    <path d="M 153 42 C 166 44, 173 54, 168 62 C 162 70, 146 64, 136 54 Z" fill="#121212" opacity="0.85"/>
+
+    <!-- Center Knot -->
+    <path d="M 88 44 C 88 38, 110 38, 110 44 C 112 52, 110 60, 108 64 C 102 68, 94 68, 90 64 C 86 60, 86 52, 88 44 Z" fill="url(#knotGrad)"/>
+    <!-- Knot Crease folds -->
+    <path d="M 92 42 Q 99 48 95 62" stroke="#5a5a5a" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M 104 42 Q 101 48 103 62" stroke="#333333" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" fill="none">
+  <defs>
+    <linearGradient id="kdrama-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141829"/>
+      <stop offset="40%" stop-color="#2c2242"/>
+      <stop offset="75%" stop-color="#54375b"/>
+      <stop offset="100%" stop-color="#9a5a7c"/>
+    </linearGradient>
+    <radialGradient id="moon-glow" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#fffdf0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#eed99e" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#eed99e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloud-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8829c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#141829" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="400" height="550" rx="16" fill="url(#kdrama-sky)"/>
+
+  <!-- Celestial Glow & Crescent Moon -->
+  <circle cx="320" cy="110" r="70" fill="url(#moon-glow)"/>
+  <path d="M330,85 C310,95 305,120 320,135 C305,130 295,110 305,90 C312,80 322,82 330,85 Z" fill="#fffdfa"/>
+
+  <!-- Swirling Dreamy Clouds -->
+  <path d="M-20,280 Q80,240 180,270 T380,250 T440,290 L440,550 L-20,550 Z" fill="url(#cloud-glow)"/>
+  <path d="M-20,360 Q90,320 200,340 T420,330 L420,550 L-20,550 Z" fill="#1b1d33" fill-opacity="0.7"/>
+
+  <!-- Twinkling Star Clusters -->
+  <g fill="#fff" opacity="0.85">
+    <circle cx="60" cy="80" r="1.5"/>
+    <circle cx="120" cy="140" r="2"/>
+    <circle cx="180" cy="70" r="1.2"/>
+    <circle cx="240" cy="120" r="1.8"/>
+    <circle cx="90" cy="200" r="1.5"/>
+    <circle cx="280" cy="190" r="1.2"/>
+    <circle cx="150" cy="220" r="1.5"/>
+    <!-- 4 point stars -->
+    <path d="M120,60 Q120,70 110,70 Q120,70 120,80 Q120,70 130,70 Q120,70 120,60 Z" fill="#eed99e"/>
+    <path d="M220,160 Q220,166 214,166 Q220,166 220,172 Q220,166 226,166 Q220,166 220,160 Z" fill="#eed99e"/>
+  </g>
+
+  <!-- Distant Silhouette of Two Bench Viewers Under Night Sky -->
+  <g opacity="0.85">
+    <!-- Hill Silhouette -->
+    <path d="M0,450 Q200,380 400,440 L400,550 L0,550 Z" fill="#0d0f1a"/>
+    <!-- Distant Streetlamp with Warm Glow -->
+    <circle cx="120" cy="380" r="28" fill="#ffd97d" opacity="0.25"/>
+    <path d="M118,370 L122,370 L124,430 L116,430 Z" fill="#1b1a2e"/>
+    <path d="M110,370 Q120,360 130,370 Z" fill="#1b1a2e"/>
+    <circle cx="120" cy="374" r="3" fill="#fff6d6"/>
+    
+    <!-- Small Silhouette Bench -->
+    <rect x="230" y="405" width="60" height="4" fill="#1b1a2e"/>
+    <rect x="236" y="409" width="3" height="15" fill="#1b1a2e"/>
+    <rect x="281" y="409" width="3" height="15" fill="#1b1a2e"/>
+    <!-- Subtle Silhouette Figures -->
+    <circle cx="248" cy="390" r="6" fill="#1b1a2e"/>
+    <path d="M242,397 C242,397 248,395 254,397 L256,410 L240,410 Z" fill="#1b1a2e"/>
+    <circle cx="268" cy="388" r="6.5" fill="#1b1a2e"/>
+    <path d="M261,396 C261,396 268,394 275,396 L277,410 L259,410 Z" fill="#1b1a2e"/>
+  </g>
+
+  <!-- Falling Cherry / Lily Petals -->
+  <g fill="#fca5a5" opacity="0.6">
+    <ellipse cx="140" cy="280" rx="4" ry="7" transform="rotate(25 140 280)"/>
+    <ellipse cx="270" cy="310" rx="3.5" ry="6" transform="rotate(-35 270 310)"/>
+    <ellipse cx="190" cy="350" rx="3" ry="5" transform="rotate(45 190 350)"/>
+  </g>
+
+  <!-- Cinematic Card Typography / Branding Overlay -->
+  <rect x="20" y="20" width="360" height="510" rx="10" stroke="#eed99e" stroke-opacity="0.3" stroke-width="1.2" fill="none"/>
+  
+  <text x="200" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#fdfbf7" text-anchor="middle" letter-spacing="4" opacity="0.8">A SPECIAL MEMORY PRODUCTION</text>
+  
+  <text x="200" y="480" font-family="'Playfair Display', serif" font-size="28" font-weight="700" font-style="italic" fill="#ffffff" text-anchor="middle" letter-spacing="1">Our Sticky Love</text>
+  
+  <text x="200" y="504" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="500" fill="#eed99e" text-anchor="middle" letter-spacing="3">EPISODE 1009 · FOREVER IN MEMORY</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Hand-drawn heart doodle -->
+  <path d="M50,78 C35,62 18,48 18,34 C18,22 28,14 40,16 C46,17 50,22 50,22 C50,22 54,17 60,16 C72,14 82,22 82,34 C82,48 65,62 50,78 Z" stroke="#c24d58" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#fae8f0" fill-opacity="0.8"/>
+  <path d="M28,26 C32,22 38,22 42,24" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" fill="none">
+  <!-- Washi tape with torn semi-transparent pastel texture -->
+  <defs>
+    <pattern id="grid-pattern" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#e8829c" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+  <path d="M 0,5 Q 3,0 8,3 L 142,1 Q 147,4 150,2 L 148,35 Q 144,40 140,37 L 8,39 Q 3,36 0,38 Z" fill="#fae8f0" fill-opacity="0.85"/>
+  <path d="M 0,5 Q 3,0 8,3 L 142,1 Q 147,4 150,2 L 148,35 Q 144,40 140,37 L 8,39 Q 3,36 0,38 Z" fill="url(#grid-pattern)"/>
+</svg>

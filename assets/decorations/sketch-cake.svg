@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" fill="none">
+  <!-- Subtle hand-drawn ink texture styling -->
+  <defs>
+    <filter id="inkRough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#inkRough)">
+    <!-- 1. Pedestal Stand -->
+    <!-- Base Foot -->
+    <path d="M 68 252 C 68 244, 90 238, 120 238 C 150 238, 172 244, 172 252 C 172 260, 150 266, 120 266 C 90 266, 68 260, 68 252 Z" 
+          fill="#faf6ee" stroke="#1c1c1c" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Base Foot inner rim sketch line -->
+    <path d="M 78 253 C 78 248, 96 244, 120 244 C 144 244, 162 248, 162 253" 
+          stroke="#1c1c1c" stroke-width="1.2" fill="none"/>
+    
+    <!-- Tapered Pedestal Neck/Pillar -->
+    <path d="M 104 216 C 104 228, 92 240, 88 246 L 152 246 C 148 240, 136 228, 136 216 Z" 
+          fill="#faf6ee" stroke="#1c1c1c" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Stem shadow hatching -->
+    <line x1="112" y1="224" x2="114" y2="238" stroke="#333" stroke-width="1"/>
+    <line x1="118" y1="222" x2="120" y2="240" stroke="#333" stroke-width="1"/>
+    <line x1="124" y1="222" x2="126" y2="240" stroke="#333" stroke-width="1"/>
+
+    <!-- Plate Rim -->
+    <ellipse cx="120" cy="214" rx="84" ry="10" fill="#faf6ee" stroke="#1c1c1c" stroke-width="2.2"/>
+    <path d="M 38 214 C 38 221, 75 226, 120 226 C 165 226, 202 221, 202 214" 
+          stroke="#1c1c1c" stroke-width="1.8" fill="none"/>
+
+    <!-- 2. Bottom Cake Tier (Large) -->
+    <!-- Base outline -->
+    <path d="M 40 156 L 40 206 C 40 214, 76 220, 120 220 C 164 220, 200 214, 200 206 L 200 156" 
+          fill="#faf6ee" stroke="#1c1c1c" stroke-width="2.2" stroke-linejoin="round"/>
+    
+    <!-- Fine horizontal sketch texture rings around base (from reference) -->
+    <path d="M 42 202 Q 120 212, 198 202" stroke="#1c1c1c" stroke-width="1.5" fill="none"/>
+    <path d="M 43 196 Q 120 206, 197 196" stroke="#1c1c1c" stroke-width="1.2" fill="none"/>
+    <path d="M 44 190 Q 120 200, 196 190" stroke="#1c1c1c" stroke-width="1.4" fill="none"/>
+    <path d="M 45 184 Q 120 194, 195 184" stroke="#1c1c1c" stroke-width="1.2" fill="none"/>
+
+    <!-- Bottom Tier Scalloped Frosting Drips (characteristic drip shapes from reference) -->
+    <path d="M 40 156 
+             C 40 168, 48 174, 54 174 
+             C 60 174, 62 162, 68 162 
+             C 74 162, 76 178, 84 178 
+             C 92 178, 96 160, 102 160 
+             C 108 160, 112 180, 122 180 
+             C 132 180, 136 162, 142 162 
+             C 148 162, 152 176, 160 176 
+             C 168 176, 172 160, 178 160 
+             C 184 160, 190 172, 196 172 
+             C 200 172, 200 164, 200 156 Z" 
+          fill="#ffffff" stroke="#1c1c1c" stroke-width="2.2" stroke-linejoin="round"/>
+    
+    <!-- Shading hatching lines under drips -->
+    <line x1="52" y1="176" x2="55" y2="182" stroke="#444" stroke-width="1"/>
+    <line x1="82" y1="180" x2="85" y2="186" stroke="#444" stroke-width="1"/>
+    <line x1="120" y1="182" x2="123" y2="188" stroke="#444" stroke-width="1"/>
+    <line x1="158" y1="178" x2="161" y2="184" stroke="#444" stroke-width="1"/>
+
+    <!-- 3. Top Cake Tier (Smaller) -->
+    <!-- Side walls -->
+    <path d="M 60 110 L 60 158 C 60 166, 87 172, 120 172 C 153 172, 180 166, 180 158 L 180 110" 
+          fill="#faf6ee" stroke="#1c1c1c" stroke-width="2.2" stroke-linejoin="round"/>
+    
+    <!-- Top tier horizontal sketch rings -->
+    <path d="M 62 152 Q 120 160, 178 152" stroke="#1c1c1c" stroke-width="1.2" fill="none"/>
+    <path d="M 64 146 Q 120 154, 176 146" stroke="#1c1c1c" stroke-width="1.3" fill="none"/>
+
+    <!-- Top Tier Scalloped Frosting Drips -->
+    <path d="M 60 110 
+             C 60 122, 68 130, 76 130 
+             C 84 130, 88 116, 94 116 
+             C 100 116, 104 134, 114 134 
+             C 124 134, 128 116, 134 116 
+             C 140 116, 144 130, 152 130 
+             C 160 130, 164 118, 170 118 
+             C 176 118, 180 124, 180 110 Z" 
+          fill="#ffffff" stroke="#1c1c1c" stroke-width="2.2" stroke-linejoin="round"/>
+    
+    <!-- Top tier rim surface -->
+    <ellipse cx="120" cy="108" rx="60" ry="11" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.2"/>
+    <path d="M 66 108 C 66 102, 90 98, 120 98 C 150 98, 174 102, 174 108" 
+          stroke="#1c1c1c" stroke-width="1.2" fill="none"/>
+
+    <!-- 4. Hand-Drawn Birthday Candle (Striped, matching reference) -->
+    <!-- Candle Base inserted in top surface -->
+    <rect x="114" y="60" width="12" height="38" rx="2" 
+          fill="#ffffff" stroke="#1c1c1c" stroke-width="2"/>
+    <!-- Diagonal hand-drawn stripes on candle -->
+    <line x1="114" y1="68" x2="126" y2="64" stroke="#1c1c1c" stroke-width="1.8"/>
+    <line x1="114" y1="78" x2="126" y2="74" stroke="#1c1c1c" stroke-width="1.8"/>
+    <line x1="114" y1="88" x2="126" y2="84" stroke="#1c1c1c" stroke-width="1.8"/>
+    <!-- Wick extending to top -->
+    <path d="M 120 60 Q 118 53 120 48" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

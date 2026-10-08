@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 300" fill="none" stroke="currentColor">
+  <!-- Delicate botanical branch SVG -->
+  <g stroke-linecap="round" stroke-linejoin="round" stroke="#7a9a7a" stroke-width="2">
+    <!-- Main stem -->
+    <path d="M80,290 Q85,200 70,120 Q60,60 90,10"/>
+    
+    <!-- Leaves Left -->
+    <path d="M78,240 Q50,225 45,205 Q70,215 77,235 Z" fill="#e8f3e8"/>
+    <path d="M72,180 Q40,170 35,145 Q62,158 71,175 Z" fill="#e8f3e8"/>
+    <path d="M66,120 Q35,105 32,80 Q56,95 65,115 Z" fill="#e8f3e8"/>
+    <path d="M70,60 Q45,45 42,25 Q62,35 70,55 Z" fill="#e8f3e8"/>
+
+    <!-- Leaves Right -->
+    <path d="M82,210 Q110,195 118,175 Q95,188 81,205 Z" fill="#e8f3e8"/>
+    <path d="M73,150 Q105,138 112,118 Q88,130 72,145 Z" fill="#e8f3e8"/>
+    <path d="M66,90 Q95,75 102,55 Q80,68 67,85 Z" fill="#e8f3e8"/>
+
+    <!-- Small berries/buds -->
+    <circle cx="92" cy="12" r="3.5" fill="#e8829c" stroke="#c24d58" stroke-width="1.2"/>
+    <circle cx="115" cy="115" r="3" fill="#e8829c" stroke="#c24d58" stroke-width="1.2"/>
+    <circle cx="33" cy="80" r="3" fill="#e8829c" stroke="#c24d58" stroke-width="1.2"/>
+  </g>
+</svg>
