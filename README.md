@@ -15,7 +15,7 @@ A mobile-first, Pinterest-stationery and K-drama scrapbook inspired interactive 
    - **Dots & Boxes**: Interactive turn-based game (Player vs Memory Bot or 2-Player).
    - **Drawing Together**: Sketchpad canvas with color palettes, brush sizes, floral stamp, eraser, and doodle download.
 7. **Our Sticky Love (K-Drama Scrapbook)**: Clothesline photo arrangement with five hanging Polaroid photos clipped by wooden clothespins to a curved twine cord, featuring tap-to-zoom interaction.
-8. **Chapter 03 — Melodies & Atmosphere**: Integrated Spotify embeds for Lana Del Rey and Ariana Grande soundtracks.
+8. **Chapter 03 — Melodies & Atmosphere**: Custom vinyl record audio player with local MP3 playback (Cinnamon Girl, Die For You Remix, 7 rings), real-time progress bar, seeking, and interactive playlist.
 9. **Starry Night Keepsake Ending**: Dynamic celestial canvas with glowing stars, floating lanterns, and silent wish sender.
 
 ---

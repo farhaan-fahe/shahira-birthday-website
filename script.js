@@ -713,8 +713,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===================================================================
-  // 7. SCENE 9: SPOTIFY MUSIC ATMOSPHERE ENGINE
+  // 7. SCENE 8: LOCAL AUDIO MUSIC ATMOSPHERE ENGINE
   // ===================================================================
+  const htmlAudioPlayer = document.getElementById('htmlAudioPlayer');
   const mainPlayBtn = document.getElementById('mainPlayBtn');
   const musicToggleBtn = document.getElementById('musicToggleBtn');
   const miniDisc = document.getElementById('miniDisc');
@@ -725,14 +726,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextTrackBtn = document.getElementById('nextTrackBtn');
   const trackTitleDisplay = document.getElementById('trackTitleDisplay');
   const trackArtistDisplay = document.getElementById('trackArtistDisplay');
-  const trackAlbumDisplay = document.getElementById('trackAlbumDisplay');
+  const audioProgressBar = document.getElementById('audioProgressBar');
+  const progressFill = document.getElementById('progressFill');
+  const audioCurrentTime = document.getElementById('audioCurrentTime');
   const audioTotalDuration = document.getElementById('audioTotalDuration');
   const playlistSelector = document.getElementById('playlistSelector');
-  const spotifyEmbedContainer = document.getElementById('spotifyEmbedContainer');
 
   let currentTrack = 0;
   let isPlaying = false;
   let tracks = config.music?.tracks || [];
+
+  function formatTime(seconds) {
+    if (isNaN(seconds) || seconds < 0) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  }
 
   function buildPlaylist() {
     if (!playlistSelector || tracks.length === 0) return;
@@ -742,56 +751,76 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="playlist-item-title">${escapeHtml(track.title)}</div>
           <div class="playlist-item-sub">${escapeHtml(track.artist)}</div>
         </div>
-        <a href="${escapeHtml(track.spotifyUrl)}" target="_blank" rel="noopener noreferrer" class="spotify-link-btn" title="Open on Spotify" onclick="event.stopPropagation();">
-          <span>💚 Spotify</span>
-        </a>
+        <div class="song-play-badge">
+          <span class="badge-text">${idx === currentTrack && isPlaying ? 'Playing ♫' : 'Play Song'}</span>
+        </div>
       </div>
     `).join('');
 
     playlistSelector.querySelectorAll('.playlist-item').forEach(item => {
       item.addEventListener('click', () => {
-        currentTrack = parseInt(item.dataset.idx, 10);
-        loadTrack(currentTrack);
-        openSpotifyTrack(currentTrack);
+        const idx = parseInt(item.dataset.idx, 10);
+        if (idx === currentTrack && isPlaying) {
+          togglePlay();
+        } else {
+          loadTrack(idx, true);
+        }
       });
     });
   }
 
-  function loadTrack(index) {
+  function loadTrack(index, autoPlay = false) {
     if (!tracks[index]) return;
     currentTrack = index;
     const track = tracks[currentTrack];
 
     if (trackTitleDisplay) trackTitleDisplay.textContent = track.title;
     if (trackArtistDisplay) trackArtistDisplay.textContent = track.artist;
-    if (trackAlbumDisplay) trackAlbumDisplay.textContent = track.album || '';
     if (musicPillTitle) musicPillTitle.textContent = track.title;
-    if (audioTotalDuration) audioTotalDuration.textContent = track.duration || '3:30';
+    if (audioTotalDuration) audioTotalDuration.textContent = track.duration || '0:00';
+    if (audioCurrentTime) audioCurrentTime.textContent = '0:00';
+    if (progressFill) progressFill.style.width = '0%';
 
     document.querySelectorAll('.playlist-item').forEach((item, idx) => {
-      item.classList.toggle('active', idx === currentTrack);
+      const isActive = idx === currentTrack;
+      item.classList.toggle('active', isActive);
+      const badge = item.querySelector('.badge-text');
+      if (badge) {
+        badge.textContent = (isActive && isPlaying) ? 'Playing ♫' : 'Play Song';
+      }
     });
-    embedSpotifyTrack(currentTrack);
-  }
 
-  function embedSpotifyTrack(index) {
-    const track = tracks[index];
-    if (!track) return;
-    const embedUrl = track.spotifyUrl.replace('open.spotify.com/track/', 'open.spotify.com/embed/track/');
-    const iframeHtml = `<iframe src="${embedUrl}" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="border-radius:12px;"></iframe>`;
-    if (spotifyEmbedContainer) {
-      spotifyEmbedContainer.innerHTML = iframeHtml;
+    if (htmlAudioPlayer) {
+      const src = track.audioSrc || `audio/${track.title}.mp3`;
+      htmlAudioPlayer.src = encodeURI(src);
+      if (autoPlay) {
+        htmlAudioPlayer.play().then(() => {
+          isPlaying = true;
+          updatePlayUI(true);
+        }).catch(err => {
+          console.warn('Playback prevented or file error:', err);
+          isPlaying = false;
+          updatePlayUI(false);
+        });
+      }
     }
-    isPlaying = true;
-    updatePlayUI(true);
   }
 
   function togglePlay() {
+    if (!htmlAudioPlayer) return;
     if (isPlaying) {
-      isPlaying = false;
-      updatePlayUI(false);
+      htmlAudioPlayer.pause();
     } else {
-      embedSpotifyTrack(currentTrack);
+      if (!htmlAudioPlayer.src || htmlAudioPlayer.src === window.location.href) {
+        const track = tracks[currentTrack];
+        htmlAudioPlayer.src = encodeURI(track.audioSrc || `audio/${track.title}.mp3`);
+      }
+      htmlAudioPlayer.play().then(() => {
+        isPlaying = true;
+        updatePlayUI(true);
+      }).catch(err => {
+        console.warn('Playback error:', err);
+      });
     }
   }
 
@@ -800,6 +829,59 @@ document.addEventListener('DOMContentLoaded', () => {
     if (miniDisc) miniDisc.classList.toggle('spinning', playing);
     if (soundWave) soundWave.classList.toggle('active', playing);
     if (vinylRecord) vinylRecord.classList.toggle('playing', playing);
+
+    document.querySelectorAll('.playlist-item').forEach((item, idx) => {
+      const isActive = idx === currentTrack;
+      item.classList.toggle('active', isActive);
+      const badge = item.querySelector('.badge-text');
+      if (badge) {
+        badge.textContent = (isActive && playing) ? 'Playing ♫' : 'Play Song';
+      }
+    });
+  }
+
+  if (htmlAudioPlayer) {
+    htmlAudioPlayer.addEventListener('play', () => {
+      isPlaying = true;
+      updatePlayUI(true);
+    });
+
+    htmlAudioPlayer.addEventListener('pause', () => {
+      isPlaying = false;
+      updatePlayUI(false);
+    });
+
+    htmlAudioPlayer.addEventListener('timeupdate', () => {
+      if (!htmlAudioPlayer.duration) return;
+      const current = htmlAudioPlayer.currentTime;
+      const duration = htmlAudioPlayer.duration;
+      const pct = (current / duration) * 100;
+      if (progressFill) progressFill.style.width = `${pct}%`;
+      if (audioCurrentTime) audioCurrentTime.textContent = formatTime(current);
+      if (audioTotalDuration && duration) audioTotalDuration.textContent = formatTime(duration);
+    });
+
+    htmlAudioPlayer.addEventListener('loadedmetadata', () => {
+      if (htmlAudioPlayer.duration && audioTotalDuration) {
+        audioTotalDuration.textContent = formatTime(htmlAudioPlayer.duration);
+      }
+    });
+
+    htmlAudioPlayer.addEventListener('ended', () => {
+      currentTrack = (currentTrack + 1) % tracks.length;
+      loadTrack(currentTrack, true);
+    });
+  }
+
+  if (audioProgressBar && htmlAudioPlayer) {
+    audioProgressBar.addEventListener('click', (e) => {
+      const rect = audioProgressBar.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      if (htmlAudioPlayer.duration && width > 0) {
+        htmlAudioPlayer.currentTime = (clickX / width) * htmlAudioPlayer.duration;
+      }
+    });
   }
 
   if (mainPlayBtn) mainPlayBtn.addEventListener('click', togglePlay);
@@ -808,16 +890,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prevTrackBtn) {
     prevTrackBtn.addEventListener('click', () => {
       currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
-      loadTrack(currentTrack);
-      embedSpotifyTrack(currentTrack);
+      loadTrack(currentTrack, true);
     });
   }
 
   if (nextTrackBtn) {
     nextTrackBtn.addEventListener('click', () => {
       currentTrack = (currentTrack + 1) % tracks.length;
-      loadTrack(currentTrack);
-      embedSpotifyTrack(currentTrack);
+      loadTrack(currentTrack, true);
     });
   }
 

@@ -88,7 +88,7 @@ const BIRTHDAY_CONFIG = {
     ]
   },
 
-  // Section 9: Music Configuration (Connected directly to Spotify)
+  // Section 8: Music Configuration (Connected directly to local MP3 audio)
   music: {
     title: "Dreamy Playlist",
     currentTrackIndex: 0,
@@ -96,26 +96,20 @@ const BIRTHDAY_CONFIG = {
       {
         title: "Cinnamon Girl",
         artist: "Lana Del Rey",
-        album: "Norman Fucking Rockwell!",
-        duration: "5:00",
-        spotifyUrl: "https://open.spotify.com/track/2mdEsXPu8ZmkHRRtAdC09e?si=8aebc92753af41c8",
-        notes: "Soft, melancholic, vintage cinematic feeling"
+        audioSrc: "audio/Cinnamon Girl.mp3",
+        duration: "5:00"
       },
       {
         title: "Die For You (Remix)",
         artist: "The Weeknd & Ariana Grande",
-        album: "Starboy (Deluxe)",
-        duration: "3:52",
-        spotifyUrl: "https://open.spotify.com/track/7oDd86yk8itslrA9HRP2ki?si=0c07b81f624b4860",
-        notes: "Emotional duet, late night nostalgia"
+        audioSrc: "audio/Die For You (Remix).mp3",
+        duration: "3:52"
       },
       {
         title: "7 rings",
         artist: "Ariana Grande",
-        album: "thank u, next",
-        duration: "2:58",
-        spotifyUrl: "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF?si=6d069f1c2d64473f",
-        notes: "Confidence, sparkle & celebrate you"
+        audioSrc: "audio/7 rings.mp3",
+        duration: "2:58"
       }
     ]
   },
